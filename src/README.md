@@ -62,7 +62,6 @@
 ### Team:
 
 - Aron Diaz
-- Diego Jesús Hamui
 - Hernán Gobulin
 - Nicolás Loreto
 
