@@ -83,7 +83,7 @@ export class AuthController extends ApiController {
             this.httpContext.response.status(response.code).send(response.message);
             return;
         } else {
-            this.httpContext.response.send(response.token);
+            this.httpContext.response.setHeader("x-auth", response.token).send(response.message);
             return;
         }
     }

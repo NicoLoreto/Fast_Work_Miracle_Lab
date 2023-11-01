@@ -16,7 +16,7 @@ export class AuthService {
     );
 
     if (response.status === 200) {
-      const token = (await response.text()) as string;
+      const token = response.headers.get('x-auth') as string;
       localStorage.setItem('token', token);
     }
     return response;

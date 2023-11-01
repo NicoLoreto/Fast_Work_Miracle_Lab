@@ -106,7 +106,7 @@ export class ProfessionalUserController extends ApiController {
             this.httpContext.response.status(response.code).send(response.message);
             throw new Error(response.message);
         } else {
-            this.httpContext.response.send(response.token);
+            this.httpContext.response.setHeader("x-auth", response.token).send(response.message);
             return;
         }
     }
